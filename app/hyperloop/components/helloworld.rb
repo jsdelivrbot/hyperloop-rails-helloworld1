@@ -19,6 +19,7 @@ class Helloworld < Hyperloop::Component
   end
 
   render(DIV) do
+    InputMessage()
     show_button
     if MyStore.show_field
       DIV(class: 'formdiv') do
