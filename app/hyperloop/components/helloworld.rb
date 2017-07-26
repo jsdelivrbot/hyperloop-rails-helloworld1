@@ -12,7 +12,7 @@ class Helloworld < Hyperloop::Component
     # 我们注意到, 在这里, 仅仅调用了 run 方法, 但是没有传递任何 message 哈希过去.
     # 但是在 Store 的 receives 代码块, 仍然有一个 messages 代码块参数.
     # 这就是因为那个 outbound 参数起得作用, 感觉上, outbound 就是像指定一个默认参数?
-    MessagesOperations::GetMessages.run
+    MessagesOperations::GetMessages()
   end
 
   before_update do

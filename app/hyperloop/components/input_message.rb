@@ -17,7 +17,7 @@ class InputMessage < Hyperloop::Component
         BUTTON(class: 'btn btn-warning') do
           'Send'
         end.on(:click) do |_ev|
-          MessagesOperations::Send(message: state.message_field)
+          MessagesOperations::Send.run(message: state.message_field)
         end
 
         HR {}

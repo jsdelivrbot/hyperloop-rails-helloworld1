@@ -1,4 +1,13 @@
 module MessagesOperations
+  # 注意: 所有基于 Hyperloop::ServerOp 的 operations, 都是仅仅在 Server 执行,
+  # 即使这些代码在 client 被调用也如此, 这尤其适合于: 服务端验证, 支付, 或服务端针对文件的操作.
+  # 这里的一个猫腻是: 因为以上事实, 这里的代码不被 opal 会翻译成 js, 而是纯粹的 Server 端 Ruby 代码.
+
+  # 不同于普通的 operations , 后者可能只在 client 被运行.
+
+  # 这就意味着另一个猫腻:
+  # 下面的 SeverOp 代码, 是不可以使用 Opal 中定义的特定方法调试的.
+  # 并且输出 log 信息到 rails log, 而不是 browser log.
   class Send < Hyperloop::ServerOp
     # 这里的 param 表示, 执行 operation 的时候, 必须传递 message 参数进来.
     param :message
