@@ -3,7 +3,7 @@ upstream hyperloop-rails-helloworld_app_server {
 }
 
 server {
-  listen 8081;
+  listen 8084;
   server_name ~.;
 
   location ~ \.(aspx|php|jsp|cgi)$ {
