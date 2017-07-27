@@ -13,7 +13,7 @@ module HyperloopRailsHelloworld
 
     config.hyperloop.auto_config = false
     config.eager_load_paths -= %W[#{config.root}/app/hyperloop]
-    config.eager_load_paths += %W[#{config.root}/app/models/public]
+    config.eager_load_paths += %W[#{config.root}/app/hyperloop/models]
     config.eager_load_paths += %W[#{config.root}/app/hyperloop/operations]
 
     # config.eager_load_paths += %W(#{config.root}/app/hyperloop/stores)
