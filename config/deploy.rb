@@ -25,6 +25,7 @@ set :linked_dirs, %w{
   public/assets
   public/uploads
 }
+set :copy_files, ['node_modules']
 
 # vendor/bundle
 # public/system
