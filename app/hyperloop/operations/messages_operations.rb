@@ -1,6 +1,8 @@
 module MessagesOperations
   class MessagesBase < Hyperloop::ServerOp
     param :acting_user, nils: true
+    # dispatch to the built-in Hyperloop::Application Channel
+    # Any Ruby class (including Operations) can be used as class channel.
     dispatch_to { Hyperloop::Application }
   end
 
