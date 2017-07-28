@@ -21,13 +21,13 @@ server {
     # gzip off;   # 当 https 时, 应该关闭?
   }
 
-  location /assets {
-      root /data_1/www/hyperloop-rails-helloworld/hyperloop-rails-helloworld_staging/shared/public;
-      gzip_static on;
-      expires max;
-      add_header Cache-Control public;
-      add_header Access-Control-Allow-Origin *;
-   }
+  # location /assets {
+  #     root /data_1/www/hyperloop-rails-helloworld/hyperloop-rails-helloworld_staging/shared/public;
+  #     gzip_static on;
+  #     expires max;
+  #     add_header Cache-Control public;
+  #     add_header Access-Control-Allow-Origin *;
+  #  }
 }
 
 # server {
