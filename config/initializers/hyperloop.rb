@@ -1,4 +1,4 @@
 
 Hyperloop.configuration do |config|
-  config.transport = :simple_poller
+  config.transport = :action_cable
 end
