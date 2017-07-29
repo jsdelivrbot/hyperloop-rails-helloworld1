@@ -87,3 +87,10 @@ production:
   database: hyperloop-rails-helloworld_production
   username: hyperloop-rails-helloworld
   password: <%= ENV['HYPERLOOP-RAILS-HELLOWORLD_DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: hyperloop-rails-helloworld_staging
+  username: postgres
+  password: <%= ENV['HYPERLOOP-RAILS-HELLOWORLD_DATABASE_PASSWORD'] %>
+  
